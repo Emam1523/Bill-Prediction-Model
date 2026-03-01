@@ -28,7 +28,8 @@ export default function DashboardTab() {
 
   /* Summary table */
   const statCols = Object.keys(summary);
-  const statRows = ['count', 'mean', 'std', 'min', '25%', '50%', '75%', 'max'];
+  // const statRows = ['count', 'mean', 'std', 'min', '25%', '50%', '75%', 'max'];
+  const statRows = ['count', 'mean', 'std', 'min', '25%', '50%', '75%', 'max'].filter((r) => summary[statCols[0]][r] !== undefined);
 
   return (
     <>
